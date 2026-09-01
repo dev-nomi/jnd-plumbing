@@ -23,7 +23,7 @@ export function Footer() {
             Address
           </p>
           <address className="mt-3 text-base not-italic text-white/80">
-            JND Plumber
+            JND GLOBAL ENTERPRISE
             <br />
             Jalan Bangsar Utama 1,
             <br />
