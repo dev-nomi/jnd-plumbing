@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Phone } from "lucide-react";
 
 import { CallButton } from "@/components/shared/CallButton";
-import { PHONE_NUMBER } from "@/lib/constants";
+import { PHONE_DISPLAY } from "@/lib/constants";
 
 export function Footer() {
   return (
@@ -33,7 +33,7 @@ export function Footer() {
 
         <CallButton className="gap-2">
           <Phone className="size-4" />
-          {PHONE_NUMBER}
+          {PHONE_DISPLAY}
         </CallButton>
       </div>
 

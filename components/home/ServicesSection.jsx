@@ -2,10 +2,10 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 import { CallButton } from "@/components/shared/CallButton";
-import { ServiceItem } from "@/components/home/ServiceItem";
+import { ServiceCard } from "@/components/services/ServiceCard"; 
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { SERVICES } from "@/data/services";
+import { SERVICES_PAGE } from "@/data/servicesPage"; 
 
 export function ServicesSection() {
   return (
@@ -27,10 +27,10 @@ export function ServicesSection() {
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-4 md:grid-cols-2">
-          {SERVICES.map((service) => (
-            <ServiceItem key={service.label} {...service} />
-          ))}
+        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">                                          
+          {SERVICES_PAGE.slice(0, 6).map((service) => (
+            <ServiceCard key={service.label} {...service} />                                                        
+          ))}  
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">

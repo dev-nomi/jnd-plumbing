@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/sheet";
 import { NavLink } from "@/components/shared/NavLink";
 import { CallButton } from "@/components/shared/CallButton";
-import { PHONE_NUMBER } from "@/lib/constants";
+import { PHONE_DISPLAY } from "@/lib/constants";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -52,7 +52,7 @@ export function Navbar() {
 
         <CallButton className="gap-2">
           <Phone className="size-4" />
-          {PHONE_NUMBER}
+          {PHONE_DISPLAY}
         </CallButton>
 
         <Sheet open={open} onOpenChange={setOpen}>
@@ -105,7 +105,7 @@ export function Navbar() {
 
             <CallButton className="gap-2">
               <Phone className="size-4" />
-              {PHONE_NUMBER}
+              {PHONE_DISPLAY}
             </CallButton>
           </SheetContent>
         </Sheet>
