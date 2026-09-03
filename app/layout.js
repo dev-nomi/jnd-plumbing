@@ -3,6 +3,7 @@ import "./globals.css";
 import { Navbar } from "@/components/shared/Navbar";
 import { Footer } from "@/components/shared/Footer";
 import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
+import { Analytics } from '@vercel/analytics/next';
 
 const barlow = Barlow({
   variable: "--font-sans",
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
         <WhatsAppButton />
+        <Analytics />
       </body>
     </html>
   );
