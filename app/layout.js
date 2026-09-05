@@ -5,6 +5,7 @@ import { Footer } from "@/components/shared/Footer";
 import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import Script from "next/script";
 
 const barlow = Barlow({
   variable: "--font-sans",
@@ -40,6 +41,15 @@ export default function RootLayout({ children }) {
         <WhatsAppButton />
         <Analytics />
         <SpeedInsights />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-NQNMQQHBTB" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NQNMQQHBTB');
+          `}
+        </Script>
       </body>
     </html>
   );
